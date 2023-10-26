@@ -60,7 +60,9 @@ const Navbar = () => {
                     <div>
                         <AiOutlineSearch className='text-2xl mr-2'></AiOutlineSearch>
                     </div>
-                    <a className="btn btn-outline border-[#FF3811] text-[#FF3811] hover:bg-[#FF3811] hover:border-[#FF3811] hover:rounded-3xl">Appointment</a>
+                    <div>
+                        <button className="btn btn-outline border-[#FF3811] text-[#FF3811] hover:bg-[#FF3811] hover:border-[#FF3811] hover:rounded-3xl">Appointment</button>
+                    </div>
                 </div>
             </div>
         </div>
