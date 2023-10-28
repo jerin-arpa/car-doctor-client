@@ -1,8 +1,32 @@
 import { Link } from "react-router-dom";
 import img from '../../assets/images/login/login.svg';
+import { useContext } from "react";
+import { AuthContext } from "../../Providers/AuthProvider";
 
 
 const SignUp = () => {
+
+    const { createUser } = useContext(AuthContext);
+
+    const handleSignUp = event => {
+        event.preventDefault();
+        const form = event.target;
+        const name = form.name.value;
+        const email = form.email.value;
+        const password = form.password.value;
+        console.log(name, email, password);
+
+
+        createUser(email, password)
+            .then(result => {
+                console.log(result.user);
+            })
+            .catch(error => {
+                console.error(error);
+            })
+    }
+
+
     return (
         <div>
             <div className="my-20">
@@ -13,7 +37,7 @@ const SignUp = () => {
                     <div className='flex-1 w-full'>
                         <div className="rounded-xl shadow-xl w-full py-8">
                             <h2 className="text-3xl font-bold text-center pt-10 pb-5"><span className='text-[#FF3811]'>SignUp</span> your account</h2>
-                            <form className="px-4 md:px-14">
+                            <form onSubmit={handleSignUp} className="px-4 md:px-14">
                                 <div className="form-control">
                                     <label className="label">
                                         <span className="label-text">Your Name</span>
