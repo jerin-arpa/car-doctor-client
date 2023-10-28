@@ -11,14 +11,9 @@ const Navbar = () => {
             }> Home</NavLink>
         </li>
         <li>
-            <NavLink to="/about" className={({ isActive, isPending }) =>
+            <NavLink to="/addService" className={({ isActive, isPending }) =>
                 isPending ? "pending" : isActive ? "font-bold text-[#FF3811] underline" : ""
-            }>About</NavLink>
-        </li>
-        <li>
-            <NavLink to="/service" className={({ isActive, isPending }) =>
-                isPending ? "pending" : isActive ? "font-bold text-[#FF3811] underline" : ""
-            }>Services</NavLink>
+            }>AddService</NavLink>
         </li>
         <li>
             <NavLink to="/blog" className={({ isActive, isPending }) =>
@@ -26,9 +21,19 @@ const Navbar = () => {
             }>Blog</NavLink>
         </li>
         <li>
-            <NavLink to="/contact" className={({ isActive, isPending }) =>
+            <NavLink to="/about" className={({ isActive, isPending }) =>
                 isPending ? "pending" : isActive ? "font-bold text-[#FF3811] underline" : ""
-            }>Contact</NavLink>
+            }>About</NavLink>
+        </li>
+        <li>
+            <NavLink to="/chooseUs" className={({ isActive, isPending }) =>
+                isPending ? "pending" : isActive ? "font-bold text-[#FF3811] underline" : ""
+            }>ChooseUs</NavLink>
+        </li>
+        <li>
+            <NavLink to="/login" className={({ isActive, isPending }) =>
+                isPending ? "pending" : isActive ? "font-bold text-[#FF3811] underline" : ""
+            }>Login</NavLink>
         </li>
     </>
 
