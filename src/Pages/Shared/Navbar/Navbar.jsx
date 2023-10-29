@@ -27,8 +27,17 @@ const Navbar = () => {
         <li>
             <NavLink to="/addService" className={({ isActive, isPending }) =>
                 isPending ? "pending" : isActive ? "font-bold text-[#FF3811] underline" : ""
-            }>AddService</NavLink>
+            }>Add Service</NavLink>
         </li>
+        {
+            user?.email && <>
+                <li>
+                    <NavLink to="/bookings" className={({ isActive, isPending }) =>
+                        isPending ? "pending" : isActive ? "font-bold text-[#FF3811] underline" : ""
+                    }>Cart Details</NavLink>
+                </li>
+            </>
+        }
         <li>
             <NavLink to="/blog" className={({ isActive, isPending }) =>
                 isPending ? "pending" : isActive ? "font-bold text-[#FF3811] underline" : ""
@@ -38,11 +47,6 @@ const Navbar = () => {
             <NavLink to="/about" className={({ isActive, isPending }) =>
                 isPending ? "pending" : isActive ? "font-bold text-[#FF3811] underline" : ""
             }>About</NavLink>
-        </li>
-        <li>
-            <NavLink to="/chooseUs" className={({ isActive, isPending }) =>
-                isPending ? "pending" : isActive ? "font-bold text-[#FF3811] underline" : ""
-            }>ChooseUs</NavLink>
         </li>
     </>
 
@@ -76,7 +80,7 @@ const Navbar = () => {
                     </div>
                     <div>
                         {
-                            user ? <Link to='/login'><button onClick={handleLogOut} className="btn btn-outline border-[#FF3811] text-[#FF3811] hover:bg-[#FF3811] hover:border-[#FF3811] hover:rounded-3xl">LogOut</button></Link> :
+                            user?.email ? <Link to='/login'><button onClick={handleLogOut} className="btn btn-outline border-[#FF3811] text-[#FF3811] hover:bg-[#FF3811] hover:border-[#FF3811] hover:rounded-3xl">LogOut</button></Link> :
                                 <Link to='/login'><button className="btn btn-outline border-[#FF3811] text-[#FF3811] hover:bg-[#FF3811] hover:border-[#FF3811] hover:rounded-3xl">Login</button> </Link>
                         }
                     </div>

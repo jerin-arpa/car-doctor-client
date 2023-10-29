@@ -8,9 +8,9 @@ const SignUp = () => {
 
     const { createUser } = useContext(AuthContext);
 
-    const handleSignUp = event => {
-        event.preventDefault();
-        const form = event.target;
+    const handleSignUp = e => {
+        e.preventDefault();
+        const form = e.target;
         const name = form.name.value;
         const email = form.email.value;
         const password = form.password.value;
@@ -69,9 +69,7 @@ const SignUp = () => {
                                 </div>
 
                                 <div className="form-control mt-6">
-                                    <Link to='/login'>
-                                        <button className="btn w-full bg-[#FF3811] border-[#FF3811] hover:bg-white hover:text-[#FF3811] text-white font-bold hover:border-[#FF3811]">Sign Up</button>
-                                    </Link>
+                                    <button className="btn w-full bg-[#FF3811] border-[#FF3811] hover:bg-white hover:text-[#FF3811] text-white font-bold hover:border-[#FF3811]">Sign Up</button>
                                 </div>
                             </form>
 
