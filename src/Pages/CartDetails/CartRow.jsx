@@ -34,7 +34,7 @@ const CartRow = ({ booking, handleDelete, handlePending }) => {
             </td>
             <th>
                 {
-                    status === 'confirm' ? <button onClick={() => handlePending(_id)} className="btn bg-green-600 border-green-600 hover:bg-white hover:text-green-600 text-white font-bold hover:border-green-600">Approved</button> :
+                    status === 'confirm' ? <button onClick={() => handlePending(_id)} className="btn bg-green-700 border-green-700 hover:bg-white hover:text-green-700 text-white font-bold hover:border-green-700">Approved</button> :
                         <button onClick={() => handlePending(_id)} className="btn bg-[#FF3811] border-[#FF3811] hover:bg-white hover:text-[#FF3811] text-white font-bold hover:border-[#FF3811]">Pending</button>
                 }
             </th>
